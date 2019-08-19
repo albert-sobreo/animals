@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pure JS drag and drop functionality.</title>
+  
+  
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<div id="gradient"></div>
+<div class="container">
+  <div class="card" style=" opacity:0.9;
+  filter: alpha(opacity=50);height: 500px; margin-top: 10%;">
+    <div class="card-header"><h2>Drag the animals describing the word</h2></div>
+    <div class="card-body">
+    	<!--First Drop Target-->
+
+    <div class="row">
+    <div class="col-sm-3">
+    	<div data-drop-target="true">
+		  <div id="box1" draggable="true" class="box fish"></div>
+		  <div id="box2" draggable="true" class="box bat"></div>
+  <div id="box3" draggable="true" class="box spider"></div>
+		  <div id="box4" draggable="true" class="box snake"></div>
+  <div id="box5" draggable="true" class="box leopard"></div>
+  <div id="box6" draggable="true" class="box kangaroo"></div>
+	</div>
+    </div>
+    <div class="col-sm-9">
+    	<div class="row">
+	    	<div class="col-sm-4"><div data-drop-target="true"><h1 class="position-fixed">HOP</h1></div></div>
+	    	<div class="col-sm-4"><div data-drop-target="true"><h1 class="position-fixed">CRAWL</h1></div></div>
+        <div class="col-sm-4"><div data-drop-target="true"><h1 class="position-fixed">SWIM</h1></div></div>
+        <div class="col-sm-4"><div data-drop-target="true"><h1 class="position-fixed">FLY</h1></div></div>
+        <div class="col-sm-4"><div data-drop-target="true"><h1 class="position-fixed">RUN</h1></div></div>
+        <div class="col-sm-4"><div data-drop-target="true"><h1 class="position-fixed">JUMP</h1></div></div>
+  		</div>
+    </div>
+  </div>
+
+
+
+	<!--Second Drop Target-->
+	
+    </div> 
+    <div class="card-footer"></div>
+  </div>
+</div>
+  	
+  
+  <a href="../assessment.html" class="float1">
+<i class="fa fa-chevron-left my-float1" aria-hidden="true" style="font-size:20px"></i>
+</a>
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
