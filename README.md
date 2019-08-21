@@ -1,2 +1,2 @@
-# albert-animals.github.io
+# Animals
 Animals souce code
