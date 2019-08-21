@@ -12,8 +12,8 @@ $(function($) {
     var numberOfChecks = 0;
     var dropdownText = [];
     $(drops).each(function() {
-
       dropdownText.push($(this).text());
+      console.log(dropdownText)
     });
 
     $(dragAndDrop)
@@ -38,22 +38,20 @@ $(function($) {
         }
       });
 
-    $(dragAndDrop)
-      .find(".dropdown")
-      .prepend(
-        '<option selected="true" disabled="disabled">Select your option</option'
-      );
+    // $(dragAndDrop)
+    //   .find(".dropdown")
+    //   .prepend(
+    //     '<option selected="true" disabled="disabled">Select your option</option'
+    //   );
 
     var dropdownLength = $(dragAndDrop).find(".dropdown").length;
     var feedback = $(dragAndDrop).find(".feedback");
 
-    function checkDropdown() {
+    window.checkDropdown=function() {
       var numberCorrect = 0;
 
-      numberOfChecks++;
-
       if(numberOfChecks <= 2){
-        for (i = 0; i <= dropdownLength; i++) {
+        for (i = 1; i <= dropdownLength; i++) {
           if ($(".dropdown-" + i).val() == "correct") {
             numberCorrect++;
             console.log("You're right");
@@ -61,21 +59,21 @@ $(function($) {
             console.log("You're wrong");
           }
           
-          console.log('Answer ' + i + $(".dropdown-" + i).val());
+          console.log("Answer " + i + $(".dropdown-" + i).val());
         }
       }
 
-      if(numberOfChecks == 3){
-        dragAndDrop.find('.checkDropdownBtn').hide();
-        dragAndDrop.find('.correct-answers').show();
-        dragAndDrop.find('.user-answers-header').show();
-        dragAndDrop.find('.resetBtn').show();
-        if($(dropdowns).css('visibility') == 'visible'){
-           dragAndDrop.find('.wjec-drag-and-drop-text').css({"max-height": "150px", "overflow-y": "scroll"});
-           }
+      // if(numberOfChecks == 3){
+      //   dragAndDrop.find('.checkDropdownBtn').hide();
+      //   dragAndDrop.find('.correct-answers').show();
+      //   dragAndDrop.find('.user-answers-header').show();
+      //   dragAndDrop.find('.resetBtn').show();
+      //   if($(dropdowns).css('visibility') == 'visible'){
+      //      dragAndDrop.find('.wjec-drag-and-drop-text').css({"max-height": "150px", "overflow-y": "scroll"});
+      //      }
         
         
-      }
+      // }
 
       return numberCorrect;
       return numberOfChecks;
@@ -259,6 +257,8 @@ $(function($) {
                 left: 0,
                 top: 0
             }, 200);
+            
+        document.querySelector(".dropdown-1").value = "Spin"
 
         }
 

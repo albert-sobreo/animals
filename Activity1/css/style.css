@@ -60,7 +60,7 @@
   background: #3da759;
   color: #FFF;
   text-align: center;
-  padding: 2px 5px;
+  padding: 1px 2px;
   font-size: 16px;
 }
 
@@ -125,7 +125,10 @@
     display: inline-block;
   }
   
-  .dropdown {
+  /* .dropdown {
+    display: none;
+  } */
+  .wjec-drop{
     display: none;
   }
   
