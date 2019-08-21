@@ -19,6 +19,7 @@
 
 .drags-holder .ui-draggable {
   margin: 5px;
+  display: none;
 }
 
 .ui-draggable {
@@ -28,7 +29,7 @@
   padding: 2px 5px;
   font-size: 25px;
   white-space: nowrap;
-  display: inline-flex;
+  display: none;
 }
 
 .ui-draggable-dragging {
@@ -71,6 +72,7 @@
   position: relative;
   height: 40px;
   vertical-align: middle;
+  display: none;
 }
 
 .correct-text {
@@ -122,12 +124,14 @@
   }
   
   .wjec-drag-and-drop-text .ui-droppable {
-    display: inline-block;
+    display: none;
+
   }
   
-  /* .dropdown {
-    display: none;
-  } */
+  .dropdown {
+    background-color: #337ab7;
+    color: white
+  }
   .wjec-drop{
     display: none;
   }
