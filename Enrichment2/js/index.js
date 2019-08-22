@@ -1328,7 +1328,7 @@ var GameWidgetHelper = {
 
 
 $(document).ready( function () {
-    var words = "swim,crawl,fly,gallop,hop,jump,run,swim,walk";
+    var words = "swim,crawl,fly,gallop,hop,jump,run,walk";
         //attach the game to a div
         $("#theGrid").wordsearchwidget({
             "wordlist" : words,
