@@ -73,7 +73,7 @@ score = 0
 
 
 		//Retrieve two groups of elements, those that are draggable and those that are drop targets:
-		var draggable = document.querySelectorAll('[draggable]')
+		var draggable = document.querySelectorAll('[draggable]');
 		var targets = document.querySelectorAll('[data-drop-target]');
     //Note: using the document.querySelectorAll() will aquire every element that is using the attribute defind in the (..)
 
