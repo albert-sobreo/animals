@@ -1,4 +1,5 @@
-//Function handleDragStart(), Its purpose is to store the id of the draggable element.
+score = 0
+		//Function handleDragStart(), Its purpose is to store the id of the draggable element.
 		function handleDragStart(e) {
 			e.dataTransfer.setData("text", this.id); //note: using "this" is the same as using: e.target.
 		}//end function
@@ -39,6 +40,33 @@
 			//current drop target (i.e current perantNode) and append it to the new target element. Also remove dotted css class. 
 			draggedEl.parentNode.removeChild(draggedEl);
 			this.appendChild(draggedEl); //Note: "this" references to the current target div that is firing the "drop" event.
+			console.log(draggedId);
+			console.log(e.path[0].id);
+			if (draggedId == "box1" && e.path[0].id == "fish-drop"){
+				console.log("you are correct fish");
+				score++;
+				console.log(score);
+			}
+			else if (draggedId == "box2" && e.path[0].id == "bird-drop"){
+				console.log("you are correct bird");
+				score++;
+				console.log(score);
+			}
+			else if (draggedId == "box3" && e.path[0].id == "spider-drop"){
+				console.log("you are correct spider");
+				score++;
+				console.log(score);
+			}
+			else if (draggedId == "box4" && e.path[0].id == "dog-drop"){
+				console.log("you are correct dog");
+				score++;
+				console.log(score);
+			}
+			else if (draggedId == "box5" && e.path[0].id == "frog-drop"){
+				console.log("you are correct frog");
+				score++;
+				console.log(score);
+			}
 			this.className = "";
 		}//end Function
 
