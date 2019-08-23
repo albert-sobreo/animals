@@ -90,3 +90,16 @@ score = 0
 			targets[i].addEventListener("dragenter", handleDragEnterLeave);
 			targets[i].addEventListener("dragleave", handleDragEnterLeave);
 		}
+
+function showCorrect(){
+	var correctBlock = document.getElementById("feedback-correct");
+	var incorrectBlock = document.getElementById("feedback-incorrect");
+
+	if (score >= 5){
+		incorrectBlock.style.display = "none";
+		correctBlock.style.display = "block";
+	}
+	else{
+		incorrectBlock.style.display = "block";
+	}
+}

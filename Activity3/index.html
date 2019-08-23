@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Pure JS drag and drop functionality.</title>
+  <title>Drag and Drop activity</title>
   
   
   		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,9 +54,9 @@
     <!-- add button to check and show the results -->
       <div class="card-footer">
         <div class="row">
-          <div class="col-sm-2"><button class="btn btn-large btn-success">Check Answers</button></div>
-          <div class="feedback-incorrect center text-center container alert-danger col-sm-9" style="padding-top: 7px; display: none;">incorrect</div>
-          <div class="feedback-correct center text-center container alert-success col-sm-9" style="padding-top: 7px; display: none;">correct</div>
+          <div class="col-sm-2"><button class="btn btn-large btn-success" onclick="showCorrect()">Check Answers</button></div>
+          <div id= "feedback-incorrect" class=" center text-center container alert-danger col-sm-9" style="padding-top: 7px; display: none;">incorrect</div>
+          <div id= "feedback-correct" class=" center text-center container alert-success col-sm-9" style="padding-top: 7px; display: none;">correct</div>
         </div>
       </div>
     </div>
