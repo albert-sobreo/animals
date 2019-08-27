@@ -3,9 +3,16 @@ h2 {
   margin-left: 80px;
 }
 
+#howdy{
+	height: 300px;
+	width: 200px;
+	margin: 25px;
+	background-color: gainsboro;
+}
+
 [data-drop-target] {
 			height: 100px;
-			width: 200px;
+			width: 100px;
 			margin: 25px;
 			background-color: gainsboro;
 		}
