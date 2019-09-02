@@ -79,20 +79,13 @@ function showCorrect(){
 	var correctBlock = document.getElementById("feedback-correct");
 	var incorrectBlock = document.getElementById("feedback-incorrect");
 
-	if (score >= 5){
-		incorrectBlock.style.display = "none";
-		correctBlock.style.display = "block";
-	}
-	else{
-		incorrectBlock.style.display = "block";
-	}
-	
 	a.push(document.getElementById("dog-drop"))
 	a.push(document.getElementById("frog-drop"))
 	a.push(document.getElementById("bird-drop"))
 	a.push(document.getElementById("fish-drop"))
 	a.push(document.getElementById("spider-drop"))
 	console.log((a[0].innerHTML).includes("box4"))
+	
 	for(var i=0; i<5; i++){
 		if((a[i].innerHTML).includes("box"+(i+1))){
 			score++;
@@ -102,4 +95,12 @@ function showCorrect(){
 	document.getElementById("totalCorrect").innerHTML = score;
 	score=0;
 	a=[];
+	if (score >= 5){
+		incorrectBlock.style.display = "none";
+		correctBlock.style.display = "block";
+	}
+	else{
+		incorrectBlock.style.display = "block";
+	}
+	
 }
