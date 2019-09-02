@@ -93,14 +93,10 @@ function showCorrect(){
 	a.push(document.getElementById("fish-drop"))
 	a.push(document.getElementById("spider-drop"))
 	console.log((a[0].innerHTML).includes("box4"))
-	var element;
-	var num = 1
-	for(element in a){
-		var shit = "box".concat(num)
-		if((element.innerHTML).includes(shit)){
+	for(var i=0; i<5; i++){
+		if((a[i].innerHTML).includes("box"+(i+1))){
 			score++;
 		}
-		num++;
 	}
 
 	document.getElementById("totalCorrect").innerHTML = score;
