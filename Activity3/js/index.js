@@ -93,7 +93,6 @@ function showCorrect(){
 	}
 
 	document.getElementById("totalCorrect").innerHTML = score;
-	score=0;
 	a=[];
 	if (score >= 5){
 		incorrectBlock.style.display = "none";
@@ -102,5 +101,7 @@ function showCorrect(){
 	else{
 		incorrectBlock.style.display = "block";
 	}
+	
+	score=0;
 	
 }
