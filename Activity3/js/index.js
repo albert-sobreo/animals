@@ -94,23 +94,13 @@ function showCorrect(){
 	a.push(document.getElementById("spider-drop"))
 	console.log((a[0].innerHTML).includes("box4"))
 	var element;
-
+	var num = 1
 	for(element in a){
-		if((a[0].innerHTML).includes("box4")){
+		var shit = "box".concat(num)
+		if((element.innerHTML).includes(shit)){
 			score++;
 		}
-		if((a[1].innerHTML).includes("box5")){
-			score++;
-		}
-		if((a[2].innerHTML).includes("box2")){
-			score++;
-		}
-		if((a[3].innerHTML).includes("box1")){
-			score++;
-		}
-		if((a[4].innerHTML).includes("box3")){
-			score++;
-		}
+		num++;
 	}
 
 	document.getElementById("totalCorrect").innerHTML = score;
