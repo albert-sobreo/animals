@@ -43,10 +43,14 @@
             <h1 class="mb-3" style="font-family: Verdana, Geneva, Tahoma, sans-serif">Body Movements of Animals</h1>
             <p class="mb-5" style="font-family: Verdana, Geneva, Tahoma, sans-serif">and Their Habitat</p>
             <div class="input-group input-group-newsletter">
-              <input type="text" class="form-control" placeholder="Enter Player's Name" required>
-              <div class="input-group-append">
-                <button class="btn btn-secondary" type="button" onclick="window.location.href='page1.html'">Proceed</button>
-              </div>
+              <form action="page1.html" class="input-group input-group-newsletter">
+                <input type="text" class="form-control" placeholder="Enter Player's Name" name="username" required>
+                <div class="input-group-append">
+                  <!-- <button class="btn btn-secondary" type="button" onclick="window.location.href='page1.html'">Proceed</button> -->
+                  <input type="submit" class="btn btn-secondary" placeholder="Proceed">
+
+                </div>
+              </form>
             </div>
           </div>
         </div>

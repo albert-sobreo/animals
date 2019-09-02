@@ -12,6 +12,8 @@ dragula([
 	el.classList.add('is-moving');
 })
 .on('dragend', function(el) {
+	console.log(el.innerHTML)
+	console.log()
 	
 	// remove 'is-moving' class from element after dragging has stopped
 	el.classList.remove('is-moving');

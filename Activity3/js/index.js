@@ -1,4 +1,5 @@
-score = 0
+var score = 0
+var a = [];
 		//Function handleDragStart(), Its purpose is to store the id of the draggable element.
 		function handleDragStart(e) {
 			e.dataTransfer.setData("text", this.id); //note: using "this" is the same as using: e.target.
@@ -19,7 +20,7 @@ score = 0
 
 		//Function handles dragover event eg.. moving your source div over the target div element.
 		//If drop event occurs, the function retrieves the draggable element’s id from the DataTransfer object.
-		function handleOverDrop(e) {
+		function handleOverDrop(e){
 			e.preventDefault(); 
       //Depending on the browser in use, not using the preventDefault() could cause any number of strange default behaviours to occur.
 			if (e.type != "drop") {
@@ -40,33 +41,16 @@ score = 0
 			//current drop target (i.e current perantNode) and append it to the new target element. Also remove dotted css class. 
 			draggedEl.parentNode.removeChild(draggedEl);
 			this.appendChild(draggedEl); //Note: "this" references to the current target div that is firing the "drop" event.
-			console.log(draggedId);
-			console.log(e.path[0].id);
-			if (draggedId == "box1" && e.path[0].id == "fish-drop"){
-				console.log("you are correct fish");
-				score++;
-				console.log(score);
-			}
-			else if (draggedId == "box2" && e.path[0].id == "bird-drop"){
-				console.log("you are correct bird");
-				score++;
-				console.log(score);
-			}
-			else if (draggedId == "box3" && e.path[0].id == "spider-drop"){
-				console.log("you are correct spider");
-				score++;
-				console.log(score);
-			}
-			else if (draggedId == "box4" && e.path[0].id == "dog-drop"){
-				console.log("you are correct dog");
-				score++;
-				console.log(score);
-			}
-			else if (draggedId == "box5" && e.path[0].id == "frog-drop"){
-				console.log("you are correct frog");
-				score++;
-				console.log(score);
-			}
+
+			
+
+
+
+
+
+
+
+			document.getElementById("totalCorrect").innerHTML = score;
 			this.className = "";
 		}//end Function
 
@@ -102,4 +86,32 @@ function showCorrect(){
 	else{
 		incorrectBlock.style.display = "block";
 	}
+	
+	a.push(document.getElementById("dog-drop"))
+	a.push(document.getElementById("frog-drop"))
+	a.push(document.getElementById("bird-drop"))
+	a.push(document.getElementById("fish-drop"))
+	a.push(document.getElementById("spider-drop"))
+	console.log((a[0].innerHTML).includes("box4"))
+	var element;
+
+	for(element in a){
+		if((a[0].innerHTML).includes("box4")){
+			score++;
+		}
+		if((a[1].innerHTML).includes("box5")){
+			score++;
+		}
+		if((a[2].innerHTML).includes("box2")){
+			score++;
+		}
+		if((a[3].innerHTML).includes("box1")){
+			score++;
+		}
+		if((a[4].innerHTML).includes("box3")){
+			score++;
+		}
+	}
+
+	document.getElementById("totalCorrect").innerHTML = score;
 }
