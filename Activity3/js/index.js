@@ -100,6 +100,7 @@ function showCorrect(){
 	}
 	else{
 		incorrectBlock.style.display = "block";
+		correctBlock.style.display = "none";
 	}
 	
 	score=0;
