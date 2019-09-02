@@ -100,5 +100,6 @@ function showCorrect(){
 	}
 
 	document.getElementById("totalCorrect").innerHTML = score;
+	score=0;
 	a=[];
 }
