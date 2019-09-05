@@ -12,8 +12,9 @@ dragula([
 	el.classList.add('is-moving');
 })
 .on('dragend', function(el) {
-	console.log(el.innerHTML)
-	console.log()
+	// console.log(el.innerHTML)
+	// console.log(document.getElementById('2').outerHTML)
+	answers(el.innerHTML);
 	
 	// remove 'is-moving' class from element after dragging has stopped
 	el.classList.remove('is-moving');
@@ -86,3 +87,28 @@ var showOptions = (function () {
 
 createOptions.create();
 showOptions.init();
+
+function answers(moves){
+	switch(moves){
+		case "Gallop":
+			if ((document.getElementById(4).outerHTML.includes("Gallop"))){
+				console.log("GALLOP; YOU ARE CORRECT");
+				break;
+			}
+		case "Swim":
+			if ((document.getElementById(2).outerHTML.includes("Swim"))){
+				console.log("SWIM; YOU ARE CORRECT");
+				break;
+			}
+		case "Slither":
+			if ((document.getElementById(5).outerHTML.includes("Slither"))){
+				console.log("SLITHER; YOU ARE CORRECT");
+				break;
+			}
+		case "Jump":
+			if ((document.getElementById(3).outerHTML.includes("Jump"))){
+				console.log("JUMP; YOU ARE CORRECT");
+				break;
+			}
+	}
+}
