@@ -1,3 +1,5 @@
+var score = 0
+var a = [];
 //Function handleDragStart(), Its purpose is to store the id of the draggable element.
 		function handleDragStart(e) {
 			e.dataTransfer.setData("text", this.id); //note: using "this" is the same as using: e.target.
@@ -62,3 +64,36 @@
 			targets[i].addEventListener("dragenter", handleDragEnterLeave);
 			targets[i].addEventListener("dragleave", handleDragEnterLeave);
 		}
+
+function showCorrect(){
+	var correctBlock = document.getElementById("feedback-correct");
+	var incorrectBlock = document.getElementById("feedback-incorrect");
+
+	a.push(document.getElementById("kangaroo-drop"))
+	a.push(document.getElementById("spider-drop"))
+	a.push(document.getElementById("fish-drop"))
+	a.push(document.getElementById("bat-drop"))
+	a.push(document.getElementById("leopard-drop"))
+	a.push(document.getElementById("snake-drop"))
+	
+	for(var i=0; i<6; i++){
+		if((a[i].innerHTML).includes("box"+(i+1))){
+			score++;
+		}
+	}
+
+	document.getElementById("totalCorrect1").innerHTML = score;
+	document.getElementById("totalCorrect2").innerHTML = score;
+	a=[];
+	if (score >= 6){
+		incorrectBlock.style.display = "none";
+		correctBlock.style.display = "block";
+	}
+	else{
+		incorrectBlock.style.display = "block";
+		correctBlock.style.display = "none";
+	}
+	
+	score=0;
+	
+}

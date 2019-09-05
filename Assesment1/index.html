@@ -20,7 +20,7 @@
 <div id="gradient"></div>
 <div class="container">
   <div class="card" style=" opacity:0.9;
-  filter: alpha(opacity=50);height: 500px; margin-top: 10%;">
+  filter: alpha(opacity=50); margin-top: 10%;">
     <div class="card-header"><h2>Drag the animals describing the word</h2></div>
     <div class="card-body">
     	<!--First Drop Target-->
@@ -28,22 +28,22 @@
     <div class="row">
     <div class="col-sm-3">
     	<div data-drop-target="true" id='howdy'>
-		    <div id="box1" draggable="true" class="box fish"></div>
-		    <div id="box2" draggable="true" class="box bat"></div>
-        <div id="box3" draggable="true" class="box spider"></div>
-		    <div id="box4" draggable="true" class="box snake"></div>
+		    <div id="box3" draggable="true" class="box fish"></div>
+		    <div id="box4" draggable="true" class="box bat"></div>
+        <div id="box2" draggable="true" class="box spider"></div>
+		    <div id="box6" draggable="true" class="box snake"></div>
         <div id="box5" draggable="true" class="box leopard"></div>
-        <div id="box6" draggable="true" class="box kangaroo"></div>
+        <div id="box1" draggable="true" class="box kangaroo"></div>
 	    </div>
     </div>
     <div class="col-sm-9">
     	<div class="row">
-	    	<div class="col-sm-4"><div data-drop-target="true"><h1 class="position-fixed" style="margin-top: -50px">HOP</h1></div></div>
-	    	<div class="col-sm-4"><div data-drop-target="true"><h1 class="position-fixed" style="margin-top: -50px">CRAWL</h1></div></div>
-        <div class="col-sm-4"><div data-drop-target="true"><h1 class="position-fixed" style="margin-top: -50px">SWIM</h1></div></div>
-        <div class="col-sm-4"><div data-drop-target="true"><h1 class="position-fixed" style="margin-top: -50px">FLY</h1></div></div>
-        <div class="col-sm-4"><div data-drop-target="true"><h1 class="position-fixed" style="margin-top: -50px">RUN</h1></div></div>
-        <div class="col-sm-4"><div data-drop-target="true"><h1 class="position-fixed" style="margin-top: -50px">SLITHER</h1></div></div>
+	    	<div class="col-sm-4"><div data-drop-target="true" id="kangaroo-drop"><h1 class="position-fixed" style="margin-top: -50px">HOP</h1></div></div>
+	    	<div class="col-sm-4"><div data-drop-target="true" id="spider-drop"><h1 class="position-fixed" style="margin-top: -50px">CRAWL</h1></div></div>
+        <div class="col-sm-4"><div data-drop-target="true" id="fish-drop"><h1 class="position-fixed" style="margin-top: -50px">SWIM</h1></div></div>
+        <div class="col-sm-4"><div data-drop-target="true" id="bat-drop"><h1 class="position-fixed" style="margin-top: -50px">FLY</h1></div></div>
+        <div class="col-sm-4"><div data-drop-target="true" id="leopard-drop"><h1 class="position-fixed" style="margin-top: -50px">RUN</h1></div></div>
+        <div class="col-sm-4"><div data-drop-target="true" id="snake-drop"><h1 class="position-fixed" style="margin-top: -50px">SLITHER</h1></div></div>
   		</div>
     </div>
   </div>
@@ -53,7 +53,13 @@
 	<!--Second Drop Target-->
 	
     </div> 
-    <div class="card-footer"></div>
+    <div class="card-footer">
+      <div class="row">
+        <div class="col-sm-2"><button class="btn btn-large btn-success" onclick="showCorrect()" >Check Answers</button></div>
+        <div id= "feedback-incorrect" class=" center text-center container alert-danger col-sm-9" style="padding-top: 7px; display: none;">You scored <span class="totalCorrect" id="totalCorrect1">…</span> out of 6</div>
+        <div id= "feedback-correct" class=" center text-center container alert-success col-sm-9" style="padding-top: 7px; display: none;">Well done. You scored <span class="totalCorrect" id="totalCorrect2">…</span> out of 6</div>
+      </div>
+    </div>
   </div>
 </div>
   	

@@ -14,11 +14,10 @@ dragula([
 .on('dragend', function(el) {
 	// console.log(el.innerHTML)
 	// console.log(document.getElementById('2').outerHTML)
-	answers(el.innerHTML);
 	
 	// remove 'is-moving' class from element after dragging has stopped
 	el.classList.remove('is-moving');
-	
+	answers(el.innerHTML);
 	// add the 'is-moved' class for 600ms then remove it
 	window.setTimeout(function() {
 		el.classList.add('is-moved');
