@@ -15,6 +15,11 @@ dragula([
 	
 	// remove 'is-moving' class from element after dragging has stopped
 	el.classList.remove('is-moving');
+	var animal = (el.innerHTML)
+	var n = animal.indexOf('<')
+	var animal = animal.slice(0, n)
+	answers(animal);
+	console.log(animal)
 	
 	// add the 'is-moved' class for 600ms then remove it
 	window.setTimeout(function() {
@@ -84,3 +89,11 @@ var showOptions = (function () {
 
 createOptions.create();
 showOptions.init();
+
+function answers(animal){
+	if (animal == "Pigeon "){
+		if ((document.getElementById(2)).outerHTML.includes("Pigeon ")){
+			console.log("YOU ARE CORRECT");
+		}
+	}
+}
