@@ -1336,3 +1336,9 @@ $(document).ready( function () {
             "width" : 300});
 
 });
+
+window.addEventListener("keydown",function (e) {
+    if (e.keyCode === 114 || (e.ctrlKey && e.keyCode === 70)) { 
+        e.preventDefault();
+    }
+})
