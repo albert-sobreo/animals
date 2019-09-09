@@ -19,7 +19,7 @@ dragula([
 	var n = animal.indexOf('<')
 	var animal = animal.slice(0, n)
 	answers(animal);
-	console.log(animal)
+	checkFly();
 	
 	// add the 'is-moved' class for 600ms then remove it
 	window.setTimeout(function() {
@@ -95,5 +95,24 @@ function answers(animal){
 		if ((document.getElementById(2)).outerHTML.includes("Pigeon ")){
 			console.log("YOU ARE CORRECT");
 		}
+	}
+}
+
+function checkFly(){
+	if ((document.getElementById(2).outerHTML.includes("Eagle"))){
+		if ((document.getElementById(2).outerHTML.includes("Dragonfly"))){
+			if ((document.getElementById(2).outerHTML.includes("Pigeon"))){
+				document.getElementById("flybois").style.background = "green";
+			}
+			else{
+				document.getElementById("flybois").style.background = "#2a92bf";
+			}
+		}
+		else{
+			document.getElementById("flybois").style.background = "#2a92bf";
+		}
+	}
+	else{
+		document.getElementById("flybois").style.background = "#2a92bf";
 	}
 }
