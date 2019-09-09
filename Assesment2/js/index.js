@@ -20,7 +20,10 @@ dragula([
 	var animal = animal.slice(0, n)
 	answers(animal);
 	checkFly();
-	
+	checkRun();
+	checkSwim();
+	checkCrawl();
+
 	// add the 'is-moved' class for 600ms then remove it
 	window.setTimeout(function() {
 		el.classList.add('is-moved');
@@ -114,5 +117,62 @@ function checkFly(){
 	}
 	else{
 		document.getElementById("flybois").style.background = "#2a92bf";
+	}
+}
+
+function checkRun(){
+	if ((document.getElementById(3).outerHTML.includes("Giraffe"))){
+		if ((document.getElementById(3).outerHTML.includes("Elephant"))){
+			if ((document.getElementById(3).outerHTML.includes("Tiger"))){
+				document.getElementById("runbois").style.background = "green";
+			}
+			else{
+				document.getElementById("runbois").style.background = "#2a92bf";
+			}
+		}
+		else{
+			document.getElementById("runbois").style.background = "#2a92bf";
+		}
+	}
+	else{
+		document.getElementById("runbois").style.background = "#2a92bf";
+	}
+}
+
+function checkSwim(){
+	if ((document.getElementById(4).outerHTML.includes("Shark"))){
+		if ((document.getElementById(4).outerHTML.includes("Whale"))){
+			if ((document.getElementById(4).outerHTML.includes("Eel"))){
+				if ((document.getElementById(4).outerHTML.includes("Turtle"))){
+					document.getElementById("swimbois").style.background = "green";
+				}
+				else{
+					document.getElementById("swimbois").style.background = "#2a92bf";
+				}
+			}
+			else{
+				document.getElementById("swimbois").style.background = "#2a92bf";
+			}
+		}
+		else{
+			document.getElementById("swimbois").style.background = "#2a92bf";
+		}
+	}
+	else{
+		document.getElementById("swimbois").style.background = "#2a92bf";
+	}
+}
+
+function checkCrawl(){
+	if ((document.getElementById(5).outerHTML.includes("Crab"))){
+		if ((document.getElementById(5).outerHTML.includes("Lizard"))){
+			document.getElementById("crawlbois").style.background = "green";
+		}
+		else{
+			document.getElementById("crawlbois").style.background = "#2a92bf";
+		}
+	}
+	else{
+		document.getElementById("crawlbois").style.background = "#2a92bf";
 	}
 }
