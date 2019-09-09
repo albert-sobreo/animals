@@ -15,6 +15,10 @@ dragula([
 	// remove 'is-moving' class from element after dragging has stopped
 	el.classList.remove('is-moving');
 	answers(el);
+	checkSnakes();
+	checkHorses();
+	checkKangaroos();
+	checkFish();
 	// add the 'is-moved' class for 600ms then remove it
 	window.setTimeout(function() {
 		el.classList.add('is-moved');
@@ -90,20 +94,68 @@ function answers(movess){
 		if ((document.getElementById(4).outerHTML.includes("Gallop"))){
 			console.log("GALLOP; YOU ARE CORRECT");
 		}
+		else{
+			console.log("You are wrong");
+		}
 	}
 	else if(moves == "Swim"){
 		if ((document.getElementById(2).outerHTML.includes("Swim"))){
 			console.log("SWIM; YOU ARE CORRECT");
+		}
+		else{
+			console.log("You are wrong");
 		}
 	}
 	else if(moves == "Slither"){
 		if ((document.getElementById(5).outerHTML.includes("Slither"))){
 			console.log("SLITHER; YOU ARE CORRECT");
 		}
+		else{
+			console.log("You are wrong");
+		}
 	}
 	else if(moves == "Jump"){
 		if ((document.getElementById(3).outerHTML.includes("Jump"))){
 			console.log("JUMP; YOU ARE CORRECT");
 		}
+		else{
+			console.log("You are wrong");
+		}
+	}
+}
+
+function checkSnakes(){
+	if ((document.getElementById(5).outerHTML.includes("Slither"))){
+		document.getElementById("snakeboi").style.background = "green";
+	}
+	else{
+		document.getElementById("snakeboi").style.background = "#2A92BF";
+	}
+}
+
+function checkHorses(){
+	if ((document.getElementById(4).outerHTML.includes("Gallop"))){
+		document.getElementById("horseboi").style.background = "green";
+	}
+	else{
+		document.getElementById("horseboi").style.background = "#2A92BF";
+	}
+}
+
+function checkKangaroos(){
+	if ((document.getElementById(3).outerHTML.includes("Jump"))){
+		document.getElementById("kangboi").style.background = "green";
+	}
+	else{
+		document.getElementById("kangboi").style.background = "#2A92BF";
+	}
+}
+
+function checkFish(){
+	if((document.getElementById(2).outerHTML.includes("Swim"))){
+		document.getElementById("fishboi").style.background = "green";
+	}
+	else{
+		document.getElementById("fishboi").style.background = "#2A92BF";
 	}
 }
