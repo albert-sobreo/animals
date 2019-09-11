@@ -1,3 +1,8 @@
+var xseq = [0,1,2,3,4,4,3,2,1,0];
+var yseq = [0,1,0,0,1,0,1,1,0,1];
+
+var count = 0;
+
 function setWord() {
   
     // Return random int between min (included) and max (excluded)
@@ -13,29 +18,34 @@ function setWord() {
 
       ["Birds Crawl", "Alligators Fly", "Deers Swim", "Rabbits Slither", "Fish Fly"]
     ];
+    
+    for(var i = 0; i < 10; i++){
+        console.log(wordList[yseq[i]][xseq[i]]);
+    }
 
-  
     const articles = ['un', 'una'];
     
     var $buttons = $('.btn');
-    var elOrLa = Math.round(Math.random());
+    var elOrLa = yseq[count];
     var article = articles[elOrLa];
     var $goodBtn = $('#' + article + '-btn');
     
     var $word = $('#test-word');
-    var word = wordList[elOrLa][getRandomInt(0, wordList[elOrLa].length)];
+    var word = wordList[yseq[count]][xseq[count]];
     $word.text(word);
     
     $buttons.click(function() {
         if (this.id == $goodBtn[0].id) {
-            location.reload(true);
+            console.log(this.id);
+            count++;
+            $('html').load(location.href+'html');
+            console.log(count);
+            // location.reload(true);
         } else {
-            alert('You got the wrong answer');
-            $buttons.not($goodBtn).fadeOut();
-            $goodBtn.addClass('btn-success').removeClass('btn-primary');
-            $word.addClass('bg-danger').removeClass('bg-warning');
+            console.log(this.id);
+            count++;
+
         }
     });
 }
-
 setWord();
