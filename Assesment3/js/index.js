@@ -8,13 +8,6 @@ var count = 0;
 
 function setWord() {
     
-    // Return random int between min (included) and max (excluded)
-    function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min)) + min;
-    }
-    
     const wordList = [
       ["Birds Fly", "Aligators Crawl", "Deers Run", "Rabbits Hop", "Fish Swim"],
 
