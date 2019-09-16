@@ -41,7 +41,7 @@ function setWord() {
         else if (this.id == $goodBtn[0].id) {
             console.log("correct");
             answ.push(1);
-            if (count == 10){
+            if (count==10){
                 count++;
                 if(count>=11){
                     for(var i = 0; i<10; i++){
@@ -49,12 +49,33 @@ function setWord() {
                         sum = answ[i] + sum;
                     };
                     console.log("sum: "+sum);
+                    
+                    if(sum < 5){
+                        Swal.fire({
+                            type: 'error',
+                            title: 'You could do better',
+                            text: "Your score is " + sum,
+                        })
+                    }
+                    else if(sum >= 5 && sum < 10){
+                        Swal.fire({
+                            type: 'success',
+                            title: 'Almost there',
+                            text: "Your score is " + sum,
+                        })
+                    }
+                    else{
+                        Swal.fire({
+                            type: 'success',
+                            title: 'Excellent Job',
+                            text: "Your score is " + sum,
+                        })
+                    }
                     sum = 0;
                     return;
                 }
                 return;
             }
-            document.getElementById('counter').innerHTML = count + 1;
             document.getElementById('test-word').innerHTML = wordList[yseq[count]][xseq[count]];
             elOrLa = yseq[count];
             article = articles[elOrLa];
@@ -87,12 +108,33 @@ function setWord() {
                         sum = answ[i] + sum;
                     };
                     console.log("sum: "+sum);
+                    
+                    if(sum < 5){
+                        Swal.fire({
+                            type: 'error',
+                            title: 'You could do better',
+                            text: "Your score is " + sum,
+                        })
+                    }
+                    else if(sum >= 5 && sum < 10){
+                        Swal.fire({
+                            type: 'success',
+                            title: 'Almost there',
+                            text: "Your score is " + sum,
+                        })
+                    }
+                    else{
+                        Swal.fire({
+                            type: 'success',
+                            title: 'Excellent Job',
+                            text: "Your score is " + sum,
+                        })
+                    }
                     sum = 0;
                     return;
                 }
                 return;
             }
-            document.getElementById('counter').innerHTML = count + 1;
             document.getElementById('test-word').innerHTML = wordList[yseq[count]][xseq[count]];
             elOrLa = yseq[count];
             article = articles[elOrLa];
