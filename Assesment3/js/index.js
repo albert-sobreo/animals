@@ -60,7 +60,7 @@ function setWord() {
                     else if(sum >= 5 && sum < 10){
                         Swal.fire({
                             type: 'success',
-                            title: 'Almost there',
+                            title: 'Good Job',
                             text: "Your score is " + sum,
                         })
                     }
