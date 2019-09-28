@@ -6,15 +6,22 @@
   <title>ACTIVITY #2</title>
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
     <link rel="stylesheet" href="normalize.min.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	  <link rel="stylesheet" href="css/style.css">
 	  <link rel="stylesheet" href="../sweetalert2/dist/sweetalert2.min.css">
-	  <script src="../sweetalert2/dist/sweetalert2.all.min.js"></script><style type="text/css">
+	  <script src="../sweetalert2/dist/sweetalert2.all.min.js"></script>
+	  <script src="../vendor/jquery/jquery.min.js"></script>
+	  <style type="text/css">
 ::-webkit-scrollbar { 
 display: none; 
+}
+
+.disabledbutton{
+	pointer-events: none;
 }
 </style>
   
@@ -24,7 +31,15 @@ display: none;
 <div id="gradient"></div>
   <section class="section">
 	<h1>ASSESMENT #2</h1>
-	<h3>DIRECTIONS: Group the following animals according to their movements.</h3>
+	<h4>DIRECTIONS: Group the following animals according to their movements. <br>Press Check Answers when finished</h4>
+	<div class="row">
+		<div class="col-sm text-right">
+		<button type="button" class="btn btn-success" onclick="checkButton()" id="check-answers">Check Answers</button>
+		</div>
+		<div class="col-sm text-left">
+		<span id="score">Score:</span>
+		</div>
+	</div>
 </section>
 
 <div class="drag-container">
@@ -52,7 +67,7 @@ display: none;
 			</ul>
 		</li>
 
-		<li class="drag-column drag-column-in-progress">
+		<li class="drag-column drag-column-in-progress" id="flyboi-body">
 			<span class="drag-column-header" id="flybois">
 				<h2 style="text-align: center; font-weight: 900; font-size: 20px">FLY</h2>
 				
@@ -63,7 +78,7 @@ display: none;
 
 			</ul>
 		</li>
-		<li class="drag-column drag-column-in-progress">
+		<li class="drag-column drag-column-in-progress" id="runboi-body">
 			<span class="drag-column-header" id="runbois">
 				<h2 style="text-align: left; font-weight: 900; font-size: 19px">WALK AND RUN</h2>
 			</span>
@@ -72,7 +87,7 @@ display: none;
 			
 			</ul>
 		</li>
-		<li class="drag-column drag-column-in-progress">
+		<li class="drag-column drag-column-in-progress" id="swimboi-body">
 			<span class="drag-column-header" id="swimbois">
 				<h2 style="text-align: center; font-weight: 900; font-size: 20px">SWIM</h2>
 			</span>
@@ -81,7 +96,7 @@ display: none;
 			
 			</ul>
 		</li>
-		<li class="drag-column drag-column-in-progress">
+		<li class="drag-column drag-column-in-progress" id="crawlboi-body">
 			<span class="drag-column-header" id="crawlbois">
 				<h2 style="text-align: center; font-weight: 900; font-size: 20px">CRAWL</h2>
 			</span>

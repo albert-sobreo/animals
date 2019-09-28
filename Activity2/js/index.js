@@ -1,3 +1,5 @@
+score = 0;
+
 dragula([
 	document.getElementById('1'),
 	document.getElementById('2'),
@@ -171,6 +173,7 @@ function checkButton(){
 		if(fish_items[i].innerHTML == 'Swim'){
 			console.log(fish_items[i].innerHTML + " You are right")
 			fish_items[i].style.backgroundColor = '#4aed4a';
+			score++;
 		}
 		else{
 			fish_items[i].style.backgroundColor = '#f21f18';
@@ -181,6 +184,7 @@ function checkButton(){
 		if(kang_items[i].innerHTML == 'Jump'){
 			console.log(kang_items[i].innerHTML + " You are right")
 			kang_items[i].style.backgroundColor = '#4aed4a';
+			score++;
 		}
 		else{
 			kang_items[i].style.backgroundColor = '#f21f18';
@@ -191,6 +195,7 @@ function checkButton(){
 		if(horse_items[i].innerHTML == 'Gallop'){
 			console.log(horse_items[i].innerHTML + " You are right")
 			horse_items[i].style.backgroundColor = '#4aed4a';
+			score++;
 		}
 		else{
 			horse_items[i].style.backgroundColor = '#f21f18';
@@ -201,10 +206,13 @@ function checkButton(){
 		if(snake_items[i].innerHTML == 'Slither'){
 			console.log(snake_items[i].innerHTML + " You are right")
 			snake_items[i].style.backgroundColor = '#4aed4a';
+			score++;
 		}
 		else{
 			snake_items[i].style.backgroundColor = '#f21f18';
 		}
 	}
 	$(".drag-container").addClass("disabledbutton");
+	document.getElementById('check-answers').disabled = true;
+	document.getElementById('score').innerHTML = "Score: " + score + "/4"
 }

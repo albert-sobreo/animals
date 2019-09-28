@@ -32,8 +32,15 @@
 <div id="gradient"></div>
   <section class="section">
 	<h1>Drag and Drop activity</h1>
-	<h4>DIRECTIONS: Drag the Movements according to the animals. <br>Press Check Answers when finish</h4>
-	<button type="button" class="btn btn-success" onclick="checkButton()" id="check-answers">Check Answers</button>
+	<h4>DIRECTIONS: Drag the Movements according to the animals. <br>Press Check Answers when finished</h4>
+	<div class="row">
+		<div class="col-sm text-right">
+		<button type="button" class="btn btn-success" onclick="checkButton()" id="check-answers">Check Answers</button>
+		</div>
+		<div class="col-sm text-left">
+		<span id="score">Score:</span>
+		</div>
+	</div>
 </section>
 
 <div class="drag-container">

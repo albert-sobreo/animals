@@ -1,3 +1,5 @@
+var score = 0;
+
 dragula([
 	document.getElementById('1'),
 	document.getElementById('2'),
@@ -19,10 +21,10 @@ dragula([
 	var n = animal.indexOf('<')
 	var animal = animal.slice(0, n)
 	answers(animal);
-	checkFly();
-	checkRun();
-	checkSwim();
-	checkCrawl();
+	// checkFly();
+	// checkRun();
+	// checkSwim();
+	// checkCrawl();
 
 	// add the 'is-moved' class for 600ms then remove it
 	window.setTimeout(function() {
@@ -175,4 +177,51 @@ function checkCrawl(){
 	else{
 		document.getElementById("crawlbois").style.background = "#2a92bf";
 	}
+}
+
+function checkButton(){
+	var fly_items = document.getElementById('flyboi-body').getElementsByTagName("li");
+	var run_items = document.getElementById('runboi-body').getElementsByTagName("li");
+	var swim_items =document.getElementById('swimboi-body').getElementsByTagName("li");
+	var crawl_items =document.getElementById('crawlboi-body').getElementsByTagName("li");
+
+	for(var i = 0; i < fly_items.length; i++){
+		if(fly_items[i].innerHTML.includes("Pigeon") || fly_items[i].innerHTML.includes("Dragonfly") || fly_items[i].innerHTML.includes("Eagle")){
+			fly_items[i].style.backgroundColor = "#4aed4a";
+			score++;
+		}
+		else{
+			fly_items[i].style.backgroundColor = "#f21f18";
+		}
+	}
+	for(var i = 0; i < run_items.length; i++){
+		if(run_items[i].innerHTML.includes("Tiger") || run_items[i].innerHTML.includes("Elephant") || run_items[i].innerHTML.includes("Giraffe")){
+			run_items[i].style.backgroundColor = "#4aed4a";
+			score++;
+		}
+		else{
+			run_items[i].style.backgroundColor = "#f21f18";
+		}
+	}
+	for(var i = 0; i < swim_items.length; i++){
+		if(swim_items[i].innerHTML.includes("Turtle") || swim_items[i].innerHTML.includes("Eel") || swim_items[i].innerHTML.includes("Whale") || swim_items[i].innerHTML.includes("Shark")){
+			swim_items[i].style.backgroundColor = "#4aed4a";
+			score++;
+		}
+		else{
+			swim_items[i].style.backgroundColor = "#f21f18";
+		}
+	}
+	for(var i = 0; i < crawl_items.length; i++){
+		if(crawl_items[i].innerHTML.includes("Lizard") || crawl_items[i].innerHTML.includes("Crab")){
+			crawl_items[i].style.backgroundColor = "#4aed4a";
+			score++;
+		}
+		else{
+			crawl_items[i].style.backgroundColor = "#f21f18";
+		}
+	}
+	$(".drag-container").addClass("disabledbutton");
+	document.getElementById('check-answers').disabled = true;
+	document.getElementById('score').innerHTML = "Score: " + score + "/12"
 }
