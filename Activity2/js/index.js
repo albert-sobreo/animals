@@ -15,10 +15,10 @@ dragula([
 	// remove 'is-moving' class from element after dragging has stopped
 	el.classList.remove('is-moving');
 	answers(el);
-	checkSnakes();
-	checkHorses();
-	checkKangaroos();
-	checkFish();
+	// checkSnakes();
+	// checkHorses();
+	// checkKangaroos();
+	// checkFish();
 	// add the 'is-moved' class for 600ms then remove it
 	window.setTimeout(function() {
 		el.classList.add('is-moved');
@@ -158,4 +158,53 @@ function checkFish(){
 	else{
 		document.getElementById("fishboi").style.background = "#2A92BF";
 	}
+}
+
+function checkButton(){
+	var fish_items = document.getElementById('fishboi-body').getElementsByTagName("li");
+	var kang_items = document.getElementById('kangboi-body').getElementsByTagName("li");
+	var horse_items =document.getElementById('horseboi-body').getElementsByTagName("li");
+	var snake_items =document.getElementById('snakeboi-body').getElementsByTagName("li");
+
+	for(var i = 0; i < fish_items.length; i++){
+		// console.log(items[i].innerHTML);
+		if(fish_items[i].innerHTML == 'Swim'){
+			console.log(fish_items[i].innerHTML + " You are right")
+			fish_items[i].style.backgroundColor = '#4aed4a';
+		}
+		else{
+			fish_items[i].style.backgroundColor = '#f21f18';
+		}
+	}
+	for(var i = 0; i < kang_items.length; i++){
+		// console.log(items[i].innerHTML);
+		if(kang_items[i].innerHTML == 'Jump'){
+			console.log(kang_items[i].innerHTML + " You are right")
+			kang_items[i].style.backgroundColor = '#4aed4a';
+		}
+		else{
+			kang_items[i].style.backgroundColor = '#f21f18';
+		}
+	}
+	for(var i = 0; i < horse_items.length; i++){
+		// console.log(items[i].innerHTML);
+		if(horse_items[i].innerHTML == 'Gallop'){
+			console.log(horse_items[i].innerHTML + " You are right")
+			horse_items[i].style.backgroundColor = '#4aed4a';
+		}
+		else{
+			horse_items[i].style.backgroundColor = '#f21f18';
+		}
+	}
+	for(var i = 0; i < snake_items.length; i++){
+		// console.log(items[i].innerHTML);
+		if(snake_items[i].innerHTML == 'Slither'){
+			console.log(snake_items[i].innerHTML + " You are right")
+			snake_items[i].style.backgroundColor = '#4aed4a';
+		}
+		else{
+			snake_items[i].style.backgroundColor = '#f21f18';
+		}
+	}
+	$(".drag-container").addClass("disabledbutton");
 }
