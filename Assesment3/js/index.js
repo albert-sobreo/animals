@@ -9,7 +9,7 @@ var count = 0;
 function setWord() {
     
     const wordList = [
-      ["Birds Fly", "Aligators Crawl", "Deers Run", "Rabbits Hop", "Fish Swim"],
+      ["Birds Fly", "Alligators Crawl", "Deers Run", "Rabbits Hop", "Fish Swim"],
 
 
       ["Birds Crawl", "Alligators Fly", "Deers Swim", "Rabbits Slither", "Fish Fly"]
