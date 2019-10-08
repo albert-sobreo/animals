@@ -13,7 +13,7 @@ function createWindow () {
     backgroundColor: '#002b36',
     frame: false})
 
-
+  mainWindow.setResizable(false)
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
 
