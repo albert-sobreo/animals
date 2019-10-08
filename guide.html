@@ -28,8 +28,23 @@
 </head>
 
 <body>
-
-  <div class="overlay">
+    <div style="float: right; margin-top: 5px; margin-right: 5px">
+        <button class="btn btn-warning btn-sm" id="min-btn" style="background-color: #ffbc37; border-radius: 50px">&#8212;</button>
+        <button class="btn btn-danger btn-sm" id="close-btn" style="background-color: #fc5e55; border-radius: 50px">&#10761;</button>
+      </div>
+      <script>
+          const remote = require('electron').remote;
+           document.getElementById("min-btn").addEventListener("click", function (e) {
+                var window = remote.getCurrentWindow();
+                window.minimize(); 
+           });
+    
+           document.getElementById("close-btn").addEventListener("click", function (e) {
+                var window = remote.getCurrentWindow();
+                window.close();
+           }); 
+         </script>
+  <div class="overlay" style="z-index: -1">
     <div class="row h-100 offset-md-4">
       <div class="col-2"></div>
         <div class="col-9 my-auto">

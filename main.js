@@ -11,7 +11,10 @@ function createWindow () {
     width: 1366,
     height: 768,
     backgroundColor: '#002b36',
-    frame: false})
+    frame: false,
+    webPreferences: {
+      nodeIntegration: true
+  }})
   mainWindow.setMenu(null)
   mainWindow.setResizable(false)
   // and load the index.html of the app.
